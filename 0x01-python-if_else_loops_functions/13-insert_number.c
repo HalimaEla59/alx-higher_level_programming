@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <stddef.h>
 
 /**
  * insert_node - inserts a number into a sorted singly linked list
@@ -25,7 +26,7 @@ listint_t *insert_node(listint_t **head, int number)
 	if(*head == NULL) /*the list was empty, the new one only contains number*/
 	{
 		*head = new;
-		return(new)
+		return(new);
 	}
 	else if((*head)->n >= number) /*number is smaller than the first n in list*/
 	{
@@ -48,7 +49,7 @@ listint_t *insert_node(listint_t **head, int number)
 		}
 		temp->next = new; /*if we went thro the loop but number was the biggest*/
 		new = temp;
-		return(new)
+		return(new);
 	}
 	return(NULL);
 }
