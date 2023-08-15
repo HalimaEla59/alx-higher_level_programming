@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 def multple_returns(sentence):
-    tpl = ()
-    if len(sentence) == 0:
-        tpl = 0, "None"
+    if sentence != "":
+        return len(sentence), sentence[0]
     else:
-        tpl = len(sentence), sentence[0]
-    return tpl
+        return len(sentence), None
