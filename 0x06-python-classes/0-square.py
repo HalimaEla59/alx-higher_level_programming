@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" empty class names square """
+""" creating empty class names square """
 
 class Square:
+    """ empty class """
+
     pass
