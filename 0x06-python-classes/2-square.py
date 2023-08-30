@@ -4,8 +4,7 @@
 
 
 class Square:
-    """the same as the previous with 
-    instantination with optional size"""
+    """instantination with optional size"""
 
     def __init__(self, size=0):
         """Initializes a new square
