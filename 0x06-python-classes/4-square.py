@@ -14,7 +14,15 @@ class Square:
            must be positive and integer
         """
         self.__size = size
+
     @property
+    def size(self):
+        """getter the size of square"""
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        if
   
 
     def area(self):
