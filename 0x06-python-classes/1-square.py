@@ -2,6 +2,7 @@
 
 """class named square"""
 
+
 class Square:
     """with privat instance attribute: size"""
 
@@ -10,5 +11,5 @@ class Square:
         """Initialize a new square with:
 
         args:
-           --size(int): size of the square
+           __size(int): size of the square
         """
