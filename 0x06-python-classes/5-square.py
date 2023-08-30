@@ -2,7 +2,6 @@
 
 """define a class named Square"""
 
-
 class Square:
     """instantination with optional size"""
 
@@ -22,9 +21,7 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """setter of size of square
-        value must be positive and int
-        """
+        """setter of size of square"""
         if type(value) is not int:
             raise TypeError("size must be an integer")
         if value < 0:
@@ -37,8 +34,8 @@ class Square:
 
     def my_print(self):
         """prints size"""
-        for i in range(self.size):
-            print("#" * self.size, end="")
+        for i in range(self.__size):
+            print("#" * self.__size, end="")
             print()
-        else:
+        if self.__size == 0:
             print()
