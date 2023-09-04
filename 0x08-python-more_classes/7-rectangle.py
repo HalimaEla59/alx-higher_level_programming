@@ -7,9 +7,11 @@ class Rectangle:
 
     Attributes:
         number_of_instances (int): number of instances
+        print_symbol (any): used symbole for string representation
     """
 
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Initializes a new rectangle.
@@ -64,7 +66,8 @@ class Rectangle:
         """Prints the rectangle with hashtags"""
         if not self.perimeter():
             return ""
-        return ('\n'.join('#' * self.__width for i in range(self.__height)))
+        return ('\n'.join("{}".format(self.print_symbol)
+            * self.__width for i in range(self.__height)))
 
     def __repr__(self):
         """Returns string representation of rectangle"""
