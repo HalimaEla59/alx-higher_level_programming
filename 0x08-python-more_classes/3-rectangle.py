@@ -52,3 +52,9 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return 0
         return (self.__height * 2) + (self.__width * 2)
+
+    def __str__(self):
+        """Prints the rectangle with hashtags"""
+        if not self.perimeter():
+            return ""
+        return ('\n'.join('#' * self.__width for i in range(self.__height)))
