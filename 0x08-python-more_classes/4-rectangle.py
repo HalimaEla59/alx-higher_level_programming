@@ -58,3 +58,7 @@ class Rectangle:
         if not self.perimeter():
             return ""
         return ('\n'.join('#' * self.__width for i in range(self.__height)))
+
+    def __repr__(self):
+        """Returns string representation of rectangle"""
+        return "Rectangle('{}, {})".format(self.__width, self.__height)
