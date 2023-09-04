@@ -66,8 +66,8 @@ class Rectangle:
         """Prints the rectangle with hashtags"""
         if not self.perimeter():
             return ""
-        return ('\n'.join("{}".format(self.print_symbol)
-            * self.__width for i in range(self.__height)))
+        return ('\n'.join("{}".format(
+            self.print_symbol) * self.__width for i in range(self.__height)))
 
     def __repr__(self):
         """Returns string representation of rectangle"""
