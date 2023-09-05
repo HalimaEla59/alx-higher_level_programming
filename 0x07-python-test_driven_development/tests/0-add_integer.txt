@@ -3,6 +3,9 @@
  How to 0-add_integer.py
 ===============================
 
+Import the module
+>>> add_integer = __import__('0-add_integer').add_integer
+
 Numbers
 =======
 
