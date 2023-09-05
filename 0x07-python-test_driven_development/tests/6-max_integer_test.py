@@ -1,11 +1,16 @@
 #!/usr/bin/python3
+"""Tests the max_integer"""
+
+
 import unittest
+
 max_integer = __import__('6-max_integer').max_integer
+
 class TestMaxInteger(unittest.TestCase):
 
     def test_one(self):
-        matrix1 = [1,2,3,4]
-        self.assertEqual(max_integer(matrix1),4)
+        matrix = [1,2,3,4]
+        self.assertEqual(max_integer(matrix),4)
 
     def test_two(self):
         matrix2 = []
