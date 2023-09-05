@@ -8,44 +8,38 @@ max_integer = __import__('6-max_integer').max_integer
 
 class TestMaxInteger(unittest.TestCase):
 
-    def test_one(self):
-        matrix = [1,2,3,4]
-        self.assertEqual(max_integer(matrix),4)
-
-    def test_two(self):
-        matrix2 = []
-        self.assertEqual(max_integer(matrix2),None)
-
-    def test_three(self):
-        self.assertRaises(TypeError, max_integer,0)
-
-    def test_four(self):
-        matrix4 = {5:'a',4:'b',3:'c'}
-        self.assertRaises(KeyError, max_integer,matrix4)
-
-    def test_five(self):
-        matrix = ['a','b','c']
-        self.assertEqual(max_integer(matrix),'c')
-
-    def test_six(self):
-        matrix = 'hello'
-        self.assertEqual(max_integer(matrix),'o')
-
-    def test_seven(self):
-        matrix = [-500,1,2,3]
-        self.assertEqual(max_integer(matrix),3)
-
-    def test_eight(self):
-        matrix1 = [4]
-        self.assertEqual(max_integer(matrix1),4)
-
-    def test_nine(self):
-        matrix1 = [4,1,2,3]
-        self.assertEqual(max_integer(matrix1),4)
-
-    def test_ten(self):
-        matrix1 = [1,2,6,5,4]
-        self.assertEqual(max_integer(matrix1),6)
+   """This function tests for positive output"""
+    def test_positiveoutput(self):
+        self.assertEqual(max_integer([1, 2, 3, 4]), 4)
+    """This function tests for negative output"""
+    def test_max_negativeoutput(self):
+        self.assertEqual(max_integer([-1, -2, -3, -4]), -1)
+    """This function tests for one number"""
+    def test_max_onenumber(self):
+        self.assertEqual(max_integer([3]), 3)
+    """This function tests for one negative number"""
+    def test_max_onenegativenumber(self):
+        self.assertEqual(max_integer([-1]), -1)
+    """This function tests for unordered list"""
+    def test_max_unordered(self):
+        self.assertEqual(max_integer([1, 4, 2, 3]), 4)
+    """This function tests for identical values"""
+    def test_max_identicalvalues(self):
+        self.assertEqual(max_integer([3, 3, 3, 3]), 3)
+    """This function tests for strings"""
+    def test_max_strings(self):
+        self.assertEqual(max_integer(['a', 'b', 'c', 'd']), 'd')
+    """This function tests for raising error when None is passed"""
+    def test_max_none(self):
+        with self.assertRaises(TypeError):
+            max_integer(None)
+    """This function tests for True"""
+    def test_max_True(self):
+        with self.assertRaises(TypeError):
+            max_integer(True)
+    """This function tests for "list is empty" exists"""
+    def test_emptylist(self):
+        self.assertEqual(max_integer([]), None)
 
 if __name__ == '__main__':
     unittest.main()
