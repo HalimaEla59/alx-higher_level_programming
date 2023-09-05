@@ -1,13 +1,16 @@
 #!/usr/bin/python3
+"""Prints text with two new lines after .,?:"""
+
+
 def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    beg = 0
-    for idx, val in enumerate(text):
+    x = 0
+    for i, val in enumerate(text):
         if val in '?:.':
-            print(text[beg:idx + 1].strip() + '\n')
-            beg = idx + 1
-    if not beg:
+            print(text[x:i + 1].strip() + '\n')
+            x = i + 1
+    if not x:
         print(text, end='')
-    elif beg is not len(text):
-        print(text[beg:idx + 1].strip(), end='')
+    elif x is not len(text):
+        print(text[x:i + 1].strip(), end='')
