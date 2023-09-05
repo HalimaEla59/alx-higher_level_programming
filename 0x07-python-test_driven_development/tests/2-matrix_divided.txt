@@ -3,6 +3,9 @@
  How to 2-matrix_divided.py
 ===============================
 
+Import module
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
 Numbers
 =======
 
