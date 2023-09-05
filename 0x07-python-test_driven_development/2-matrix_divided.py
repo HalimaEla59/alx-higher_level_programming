@@ -4,10 +4,14 @@
 
 def matrix_divided(matrix, div):
     """divides all elements of matrix by divider
+
+    Args:
+       matrix (list): matrix
+       div (int or float): number
     """
     if(not isinstance(matrix,list) or not len(matrix) or
        0 in [len(listx) if type(listx) is list else 0 for listx in matrix] or
-       any(False in x for x in  [[isinstance(ele,(int,float)) for ele in row]
+       any(False in x for x in  [[isinstance(i,(int,float)) for i in row]
        for row in matrix])):
         raise TypeError(
             'matrix must be a matrix (list of lists) of integers/floats')
@@ -18,4 +22,4 @@ def matrix_divided(matrix, div):
         raise TypeError('div must be a number')
     if(div is 0):
         raise ZeroDivisionError('division by zero')
-    return [[round(ele / div, 2) for ele in row] for row in matrix]
+    return [[round(i / div, 2) for i in row] for row in matrix]
