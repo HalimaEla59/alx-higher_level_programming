@@ -4,6 +4,9 @@
 
 class BaseGeometry:
     """the class:"""
+    def __init__(self):
+        """initialising:"""
+        pass
 
     def area(self):
         """instance methode not implementes"""
@@ -13,5 +16,5 @@ class BaseGeometry:
         """validator of parameter as int and >"""
         if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(name))
-        if type(value) <= 0:
+        if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
