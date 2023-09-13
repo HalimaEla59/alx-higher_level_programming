@@ -17,6 +17,7 @@ class Student:
         if attrs is list of strings, only what is contained
         in attrs must be retrieved
         """
-        if type(attrs) == list and all(type(i) == str for i in attrs):
+        if (type(attrs) == list and all(type(i) == str for i in attrs)):
             return ({i: j for i, jin self.__dict__.items() if i in attrs})
-        return self.__dict__
+        else:
+            return self.__dict__
