@@ -18,6 +18,6 @@ class Student:
         in attrs must be retrieved
         """
         if (type(attrs) == list and all(type(i) == str for i in attrs)):
-            return ({i: j for i, jin self.__dict__.items() if i in attrs})
+            return ({i: getattr(self, i) for i in attrs if hasattr(self, i)})
         else:
             return self.__dict__
