@@ -9,6 +9,7 @@ from io import StringIO
 
 
 class TestSquare(unittest.TestCase):
+    """TestSquare class"""
 
     def test_docstrings(self):
         """tests docstrings"""
