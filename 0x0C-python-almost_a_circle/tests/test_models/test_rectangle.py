@@ -5,12 +5,14 @@ from models.rectangle import Rectangle
 from models.base import Base
 import sys
 from io import StringIO
-"""tests rectangle"""
+"""class TestRectangle tests Rectangle class"""
 
 
 class TestRectangle(unittest.TestCase):
+    """TestRectangle class"""
 
     def test_pep8(self):
+        """tests pep8 style"""
         style = pep8.StyleGuide(quiet=True)
         p = style.check_files(['models/rectangle.py','models/base.py','models/square.py'])
         self.assertEqual(p.total_errors, 0, "fix pep8")
