@@ -58,6 +58,6 @@ class Base:
         if not os.path.isfile(cls.__name__+'.json'):
             return []
         else:
-            with open(cls.__name__+.'json', "r", encoding="utf-8") as f:
+            with open(cls.__name__ + '.json', "r", encoding="utf-8") as f:
                 listD = cls.from_json_string(f.read())
             return [cls.create(**d) for d in listD]
