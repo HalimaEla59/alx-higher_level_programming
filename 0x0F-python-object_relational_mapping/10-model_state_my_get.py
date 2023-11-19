@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""lists all State objects from database hbtn_0e_6_usa SQLAlchemy"""
+"""prints State object with the name passed as argument from DB"""
 
 import sys
 from model_state import Base, State
