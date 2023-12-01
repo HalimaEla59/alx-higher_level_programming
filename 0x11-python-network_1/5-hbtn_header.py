@@ -9,4 +9,3 @@ if __name__ == "__main__":
     req = requests.get(url)
     val = 'X-Request-Id'
     print(req.headers.get(val))
-
