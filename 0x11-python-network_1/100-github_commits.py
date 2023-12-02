@@ -8,7 +8,7 @@ if __name__ == "__main__":
     user = sys.argv[2]
     repo = sys.argv[1]
     http = "https://api.github.com/repos/{}/{}/commits".format(user, repo)
-    req = request.get(http)
+    req = requests.get(http)
     commits = req.json()
     for c in commits[:10]:
         print(c.get('sha'), end=': ')
